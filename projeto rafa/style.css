@@ -1,0 +1,389 @@
+:root{
+    --main-color:#d3ad7f;
+    --main-color:white;
+    --bg:red;
+    --border:green;
+}
+
+*{
+    font-family: "Poppins", serif;
+    margin: 0; padding: 0;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top:9rem ;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body{
+    background: var(--bg);
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+.heading{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: white;
+    background:var(--border);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
+
+.header {
+    background:  var(--bg);
+    display: flex;
+    align-items: center;
+    justify-items: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .logo img{
+    height: 6rem;
+}
+.header .navbar {
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div{
+    color: red;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color: var(red);
+}
+
+#menu-btn{
+    display: none;
+}
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(img/pexels-florencia-potter-82066-351283.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content {
+    max-width: 60rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: blue;
+}
+
+.home .content p {
+    font-size: 2rem;
+    font-weight:normal;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: red;
+}
+
+.quemsomos .row {
+    display: flex;               /* Utiliza flexbox para organizar os itens lado a lado */
+    justify-content: space-between; /* Garante que haja espaço entre os itens */
+    align-items: center;         /* Alinha os itens verticalmente no centro */
+    gap: 2rem;                   /* Espaçamento entre os itens */
+}
+
+.quemsomos .row .images {
+    flex: 1;                      /* A imagem ocupa 50% da largura disponível */
+    max-width: 50%;               /* Limita a largura máxima da imagem a 50% */
+}
+
+.quemsomos .row .images img {
+    width: 100%;                  /* Faz com que a imagem ocupe 100% da largura do container */
+    height: auto;                 /* Mantém a proporção da imagem */
+}
+
+.quemsomos .row .content {
+    flex: 1;                      /* O texto ocupa a outra 50% da largura disponível */
+    max-width: 50%;               /* Limita a largura máxima do conteúdo a 50% */
+    padding: 2rem;
+}
+
+.quemsomos .row .content h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.quemsomos .row .content p {
+    font-size: 1.6rem;
+    color: #ccc;
+    padding: 1rem 0;
+    line-height: 1.8rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .quemsomos .row {
+        flex-direction: column;    /* Em telas menores, os itens ficam empilhados */
+        align-items: center;       /* Centraliza os itens */
+    }
+
+    .quemsomos .row .images, .quemsomos .row .content {
+        flex: 1 1 100%;             /* Faz com que cada item ocupe 100% da largura disponível */
+        max-width: 100%;            /* Garante que a largura máxima não ultrapasse 100% */
+        padding: 1rem;
+    }
+
+    .quemsomos .row .content h3 {
+        font-size: 2.5rem;          /* Ajusta o tamanho da fonte em dispositivos móveis */
+    }
+
+    .quemsomos .row .content p {
+        font-size: 1.4rem;          /* Ajusta o tamanho da fonte em telas menores */
+    }
+}
+
+
+.servicos .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,mimax(30rem,1fr));
+    gap:1.5rem;
+
+}
+
+.servicos .box-container .box{
+    padding: 5rem;
+    text-align: center;
+    border: var(--border);
+}
+
+.servicos .box-container .box img{
+    height: 10rem;
+}
+
+.servicos .box-container .box h3{
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.contatos .row {
+    display: flex;              /* Utiliza flexbox para alinhamento lado a lado */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    align-items: center;        /* Alinha os itens verticalmente ao centro */
+    gap: 2rem;                  /* Espaço entre o mapa e a imagem */
+}
+
+.contatos .row .map {
+    flex: 1;                    /* A área do mapa ocupa 50% do espaço disponível */
+    min-width: 300px;           /* Garantir que o mapa tenha uma largura mínima adequada */
+    height: 450px;              /* Mantém a altura do mapa consistente */
+}
+
+.contatos .row .images {
+    flex: 1;                    /* A imagem ocupa 50% do espaço disponível */
+    min-width: 300px;           /* Garantir que a imagem tenha uma largura mínima adequada */
+}
+
+.contatos .row .images img {
+    width: 100%;                /* Faz a imagem ocupar toda a largura do contêiner */
+    height: auto;               /* Mantém a proporção da imagem */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .contatos .row {
+        flex-direction: column;  /* Organiza os itens em coluna em telas pequenas */
+        align-items: center;     /* Centraliza os itens na coluna */
+    }
+
+    .contatos .row .map, .contatos .row .images {
+        min-width: 100%;         /* Faz os itens ocuparem 100% da largura disponível */
+    }
+
+    .contatos .row .map {
+        height: 300px;           /* Ajusta a altura do mapa para telas menores */
+    }
+}
+
+
+.footer{
+    background: blue;
+    text-align: center;
+}
+
+.footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0 ;
+    gap: 1rem;
+}
+
+.footer .links a{
+    padding: .7rem 2rem;
+    color: #fff;
+    border: var(--border);
+    font-size: 2rem;
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+
+.footer .credit span{
+    color: var(--main-color);
+}
+
+@media (max-width:991px) {
+
+    html{
+        font-size: 55%;
+    }
+
+    .home::before,
+    .home::after{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+@media(max-width:768px){
+
+    header #menu-bar{
+        display: block;
+    }
+
+    header .navbar{
+    position: fixed;
+    top:8rem ; left:0;
+    width: 100%;
+    background: var(--yellow);
+    border-top: .2rem solid rgba(0,0,0,.1);
+    transform:scaleY(0);
+    transform-origin:top;
+    opacity:0;
+    }
+
+    header .navbar ul{
+        flex-flow: column;
+        padding:2rem ;
+    }
+
+    header .navbar ul li {
+        margin: 1.5rem;
+        width:100%;
+    }
+
+    header .navbar ul li a {
+        display: block;
+        color: #fff;
+        padding-left:2rem;
+        border-left: .2rem solid #fff;
+        font-size: 2rem;
+    }
+
+    header .navbar ul li a:hover,
+    header .navbar ul li a.active {
+        color:#333;
+        border-color:#333;
+
+    }
+
+    .fa-times {
+        transform:rotate(180deg);
+    }
+
+    header .navbar .nav-toggle{
+        transform:scaleY(1);
+        opacity:1;
+    }
+
+    .home .content {
+        text-align: center;
+    }
+
+    .home .content h3 {
+        font-size: 4.5rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+@media (max-width:500px) {
+
+    html{
+        font-size: 50%;
+    }
+
+    section{
+        padding: 1rem 5%;
+        padding-top: 8.5rem;
+    }
+}
